@@ -1,4 +1,4 @@
-from jsonschema_cli.handlers import handle_file_uri
+from jsonschema_cli2.handlers import handle_file_uri
 from jsonschema import RefResolver
 import os
 

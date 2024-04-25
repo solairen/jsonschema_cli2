@@ -3,9 +3,9 @@ import jsonschema
 import argparse
 import pathlib
 import os
-from jsonschema_cli.load import load_file, load_string
-from jsonschema_cli.resolvers import relative_path_resolver
-from jsonschema_cli.exceptions import JsonschemaCliException
+from jsonschema_cli2.load import load_file, load_string
+from jsonschema_cli2.resolvers import relative_path_resolver
+from jsonschema_cli2.exceptions import JsonschemaCliException
 import enum
 import json
 import yaml

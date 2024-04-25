@@ -3,8 +3,8 @@ import sys
 
 import jsonschema
 
-from jsonschema_cli.args import create_parser
-from jsonschema_cli.exceptions import JsonschemaCliException
+from jsonschema_cli2.args import create_parser
+from jsonschema_cli2.exceptions import JsonschemaCliException
 
 
 def run():
