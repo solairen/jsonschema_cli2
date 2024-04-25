@@ -2,7 +2,7 @@ import os
 import pathlib
 from urllib.parse import urlparse
 
-from jsonschema_cli2.load import load_file
+from jsonschema_cli.load import load_file
 
 
 def handle_file_uri(schema_path: pathlib.Path):

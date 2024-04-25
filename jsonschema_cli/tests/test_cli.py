@@ -5,8 +5,8 @@ from pytest_mock import MockFixture
 import pytest
 import yaml
 
-from jsonschema_cli2.args import create_parser
-from jsonschema_cli2.exceptions import JsonschemaCliException
+from jsonschema_cli.args import create_parser
+from jsonschema_cli.exceptions import JsonschemaCliException
 import jsonschema
 
 
@@ -103,7 +103,7 @@ def test_load_json_schema_file(mocker: MockFixture, success_arguments: tuple):
     mock_isfile = mocker.patch("os.path.isfile")
     mock_isfile.side_effect = lambda x: x.name == "schema.json"
 
-    mock_load_file = mocker.patch("jsonschema_cli2.args.load_file", mocker.MagicMock(return_value=schema))
+    mock_load_file = mocker.patch("jsonschema_cli.args.load_file", mocker.MagicMock(return_value=schema))
     args = create_parser().parse_args(["validate", "schema.json", json.dumps(instance)])
     args.func(args)
 
@@ -114,6 +114,6 @@ def test_load_yaml_schema_file(mocker: MockFixture, success_arguments: tuple):
     mock_isfile = mocker.patch("os.path.isfile")
     mock_isfile.side_effect = lambda x: x.name == "schema.yaml"
 
-    mock_load_file = mocker.patch("jsonschema_cli2.args.load_file", mocker.MagicMock(return_value=schema))
+    mock_load_file = mocker.patch("jsonschema_cli.args.load_file", mocker.MagicMock(return_value=schema))
     args = create_parser().parse_args(["validate", "schema.yaml", yaml.dump(instance)])
     args.func(args)
