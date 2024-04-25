@@ -35,8 +35,3 @@ twine = ">=3.1.1"
 
 [tool.black]
 line-length = 120
-
-[tool.pytest.ini_options]
-testpaths = [
-    "/home/runner/work/tests",
-]
