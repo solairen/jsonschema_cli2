@@ -1,0 +1,39 @@
+{
+    "name": "jsonschema-cli2 code",
+    "build": {
+      "dockerfile": "../docker/Dockerfile-dev"
+    },
+    "postCreateCommand": "echo DONE!",
+    "workspaceMount": "source=${localWorkspaceFolder},target=/development,type=bind",
+    "workspaceFolder": "/development",
+    "remoteUser": "solairen",
+    "features": {
+      "ghcr.io/devcontainers/features/git:1": {
+        "version": "latest"
+      }
+    },
+    "customizations": {
+      "vscode": {
+        "settings": {
+          "terminal.integrated.profiles.linux": {
+            "bash": {
+              "path": "bash",
+              "icon": "terminal-bash"
+            }
+          }
+        },
+        "extensions": [
+          "ms-python.python",
+          "ms-python.vscode-pylance",
+          "redhat.vscode-yaml",
+          "eamodio.gitlens",
+          "docsmsft.docs-preview",
+          "aaron-bond.better-comments",
+          "ms-azuretools.vscode-docker",
+          "ybaumes.highlight-trailing-white-spaces",
+          "Gruntfuggly.todo-tree",
+          "GitLab.gitlab-workflow"
+        ]
+      }
+    }
+  }
