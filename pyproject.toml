@@ -7,10 +7,31 @@ jsonschema-cli2 = 'jsonschema_cli2.cli:run'
 
 [tool.poetry]
 name = "jsonschema-cli2"
-version = "0.2.0"
-description = "A thin wrapper over to allow validating shcemas easily using simple CLI commands."
-authors = ["Solairen <solairen@solairen.tech>"]
+version = "0.3.0"
+description = "A thin wrapper over to allow validating schemas easily using simple CLI commands."
+authors = ["solairen <solairen@solairen.tech>"]
 readme = 'README.md'
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+  "License :: OSI Approved :: GPL-3.0 license",
+  "Operating System :: OS Independent",
+  "Intended Audience :: Developers",
+  "Environments :: Console"
+]
+
+[tool.project.urls]
+Homepage = "https://github.com/solairen/jsonschema_cli2"
+Source = "https://github.com/solairen/jsonschema_cli2"
+Issues = "https://github.com/solairen/jsonschema_cli2/issues"
 
 [tool.poetry.dependencies]
 python = ">=3.8"

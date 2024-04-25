@@ -6,7 +6,7 @@ A thin wrapper over [Python Jsonschema](https://github.com/Julian/jsonschema) to
 
 ## Installing
 
-`pip install jsonschema-cli`
+`pip install jsonschema-cli2`
 
 ## Security
 
