@@ -1,0 +1,43 @@
+FROM python:3.12.2-slim-bookworm
+
+# Variables
+ARG username=solairen
+ARG path=/development
+
+LABEL org.opencontainers.image.source=https://github.com/solairen/jsonschema-cli2
+LABEL org.opencontainers.image.description="Jsonschema-cli2 development image"
+LABEL maintainer=solairen@solairen.tech
+LABEL release=development
+LABEL creator=https://github.com/eyal-mor/jsonschema-cli
+
+# Environment
+ENV USER=${username}
+ENV USERNAME=${username}
+
+# Use user root
+USER root
+
+# Create folders
+RUN mkdir ${path} \
+  # Update packages and install wget
+  && apt update && apt upgrade -y && apt install wget -y && apt autoremove -y && apt clean \
+  # Add user solairen
+  && useradd -ms /bin/bash ${username} \
+  && chown -R ${username}:${username} ${path} \
+  # Install starship
+  && wget -P /tmp/ https://starship.rs/install.sh \
+  && sh /tmp/install.sh -y \
+  && mkdir /home/${username}/.config \
+  && starship preset no-empty-icons -o /home/${username}/.config/starship.toml \
+  && echo '[terraform]' >> /home/${username}/.config/starship.toml \
+  && echo "format = '([(\$version | workspace: \$workspace)](\$style))'" >> /home/${username}/.config/starship.toml \
+  && echo 'eval "$(starship init bash)"' >> /home/${username}/.bashrc
+
+# Use user solairen
+USER ${username}
+
+# Workdir
+WORKDIR ${path}
+
+# Entrypoint
+ENTRYPOINT [ "bash" ]
