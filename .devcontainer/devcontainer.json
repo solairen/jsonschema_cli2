@@ -1,39 +1,45 @@
 {
-    "name": "jsonschema-cli2 code",
-    "build": {
-      "dockerfile": "../docker/Dockerfile-dev"
+  "name": "jsonschema-cli2 code",
+  "build": {
+    "dockerfile": "../docker/Dockerfile-dev"
+  },
+  "postCreateCommand": "echo DONE!",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/development,type=bind",
+  "workspaceFolder": "/development",
+  "remoteUser": "solairen",
+  "features": {
+    "ghcr.io/devcontainers/features/git:1": {
+      "version": "latest"
     },
-    "postCreateCommand": "echo DONE!",
-    "workspaceMount": "source=${localWorkspaceFolder},target=/development,type=bind",
-    "workspaceFolder": "/development",
-    "remoteUser": "solairen",
-    "features": {
-      "ghcr.io/devcontainers/features/git:1": {
-        "version": "latest"
-      }
-    },
-    "customizations": {
-      "vscode": {
-        "settings": {
-          "terminal.integrated.profiles.linux": {
-            "bash": {
-              "path": "bash",
-              "icon": "terminal-bash"
-            }
+    "ghcr.io/devcontainers/features/sshd:1": {
+      "version": "latest"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.profiles.linux": {
+          "bash": {
+            "path": "bash",
+            "icon": "terminal-bash"
           }
-        },
-        "extensions": [
-          "ms-python.python",
-          "ms-python.vscode-pylance",
-          "redhat.vscode-yaml",
-          "eamodio.gitlens",
-          "docsmsft.docs-preview",
-          "aaron-bond.better-comments",
-          "ms-azuretools.vscode-docker",
-          "ybaumes.highlight-trailing-white-spaces",
-          "Gruntfuggly.todo-tree",
-          "GitLab.gitlab-workflow"
-        ]
-      }
+        }
+      },
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "redhat.vscode-yaml",
+        "eamodio.gitlens",
+        "docsmsft.docs-preview",
+        "aaron-bond.better-comments",
+        "ms-azuretools.vscode-docker",
+        "ybaumes.highlight-trailing-white-spaces",
+        "Gruntfuggly.todo-tree",
+        "ms-python.isort",
+        "GitHub.vscode-pull-request-github",
+        "github.vscode-github-actions",
+        "ms-python.autopep8"
+      ]
     }
   }
+}

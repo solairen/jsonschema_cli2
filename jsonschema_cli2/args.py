@@ -70,5 +70,3 @@ def schema_validate(args):
     resolver = relative_path_resolver(schema, base_path=path)
 
     jsonschema.Draft7Validator(schema, resolver=resolver).validate(instance=instance)
-
-

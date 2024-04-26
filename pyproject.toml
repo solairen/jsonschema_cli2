@@ -7,12 +7,16 @@ jsonschema-cli2 = 'jsonschema_cli2.cli:run'
 
 [tool.poetry]
 name = "jsonschema-cli2"
-version = "1.0.0"
+version = "1.1.0"
 description = "A thin wrapper over to allow validating schemas easily using simple CLI commands."
 authors = ["solairen <solairen@solairen.tech>"]
 readme = 'README.md'
 classifiers = [
   "Development Status :: 5 - Production/Stable",
+  "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+  "Operating System :: OS Independent",
+  "Intended Audience :: Developers",
+  "Environment :: Console",
   "Programming Language :: Python",
   "Programming Language :: Python :: 3",
   "Programming Language :: Python :: 3 :: Only",
@@ -21,11 +25,7 @@ classifiers = [
   "Programming Language :: Python :: 3.10",
   "Programming Language :: Python :: 3.11",
   "Programming Language :: Python :: Implementation :: CPython",
-  "Programming Language :: Python :: Implementation :: PyPy",
-  "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
-  "Operating System :: OS Independent",
-  "Intended Audience :: Developers",
-  "Environment :: Console"
+  "Programming Language :: Python :: Implementation :: PyPy"
 ]
 
 [tool.poetry.urls]

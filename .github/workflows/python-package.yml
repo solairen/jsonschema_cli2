@@ -30,7 +30,7 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install flake8 pytest pytest_mock pyyaml jsonschema
+        pip install flake8==7.0.0 pytest==8.1.1 pytest_mock==3.14.0 pyyaml==6.0.1 jsonschema==4.21.1
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Lint with flake8
       run: |
