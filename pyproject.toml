@@ -7,7 +7,7 @@ jsonschema-cli2 = 'jsonschema_cli2.cli:run'
 
 [tool.poetry]
 name = "jsonschema-cli2"
-version = "1.1.0"
+version = "1.2.0"
 description = "A thin wrapper over to allow validating schemas easily using simple CLI commands."
 authors = ["solairen <solairen@solairen.tech>"]
 readme = 'README.md'
