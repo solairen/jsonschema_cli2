@@ -1,5 +1,4 @@
 import json
-from unittest import mock
 from pytest_mock import MockFixture
 
 import pytest
@@ -103,7 +102,7 @@ def test_load_json_schema_file(mocker: MockFixture, success_arguments: tuple):
     mock_isfile = mocker.patch("os.path.isfile")
     mock_isfile.side_effect = lambda x: x.name == "schema.json"
 
-    mock_load_file = mocker.patch("jsonschema_cli2.args.load_file", mocker.MagicMock(return_value=schema))
+    mocker.patch("jsonschema_cli2.args.load_file", mocker.MagicMock(return_value=schema))
     args = create_parser().parse_args(["validate", "schema.json", json.dumps(instance)])
     args.func(args)
 
@@ -114,6 +113,6 @@ def test_load_yaml_schema_file(mocker: MockFixture, success_arguments: tuple):
     mock_isfile = mocker.patch("os.path.isfile")
     mock_isfile.side_effect = lambda x: x.name == "schema.yaml"
 
-    mock_load_file = mocker.patch("jsonschema_cli2.args.load_file", mocker.MagicMock(return_value=schema))
+    mocker.patch("jsonschema_cli2.args.load_file", mocker.MagicMock(return_value=schema))
     args = create_parser().parse_args(["validate", "schema.yaml", yaml.dump(instance)])
     args.func(args)

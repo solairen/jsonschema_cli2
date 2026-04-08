@@ -1,7 +1,7 @@
-flake8==7.0.0
-pytest==8.1.1
+flake8==7.2.0
+pytest==8.3.5
 pytest_mock==3.14.0
-pyyaml==6.0.1
-jsonschema==4.21.1
-poetry==1.8.2
-twine==5.0.0
+pyyaml==6.0.2
+jsonschema==4.23.0
+poetry==2.3.3
+twine==6.1.0

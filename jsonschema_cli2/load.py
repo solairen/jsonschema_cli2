@@ -1,4 +1,3 @@
-import jsonschema
 import yaml
 import json
 
