@@ -28,4 +28,4 @@ jobs:
           python -m pip install --upgrade poetry==2.3.3 twine==6.2.0
           poetry build
       - name: Publish package distributions to PyPI
-        uses: pypa/gh-action-pypi-publish@v1.13.0
+        uses: pypa/gh-action-pypi-publish@v1.14.0
