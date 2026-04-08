@@ -4,4 +4,4 @@ pytest_mock==3.15.1
 pyyaml==6.0.3
 jsonschema==4.23.0
 poetry==2.3.3
-twine==6.1.0
+twine==6.2.0
