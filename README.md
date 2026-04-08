@@ -1,8 +1,10 @@
-This is based on the frok from [jsonschema-cli](https://github.com/eyal-mor/jsonschema-cli.git).
+This is based on the fork from [jsonschema-cli](https://github.com/eyal-mor/jsonschema-cli.git).
 
 # JsonSchema CLI
 
-A thin wrapper over [Python Jsonschema](https://github.com/Julian/jsonschema) to allow validating shcemas easily using simple CLI commands.
+A thin wrapper over [Python Jsonschema](https://github.com/Julian/jsonschema) to allow validating schemas easily using simple CLI commands.
+
+Requires Python >= 3.10.
 
 ## Installing
 
@@ -26,12 +28,12 @@ To make sure this doesn't happen:
 
 1. When using this tool in a backend server, make sure the file access is scoped.
 2. Don't run JSONSCHEMAS without sanitizing paths.
-3. Treat all un-knwon user input as evil.
+3. Treat all unknown user input as evil.
 
-This has no actual current  affect other than loading the contets of secrets into memory of the process.
+This has no actual current affect other than loading the contents of secrets into memory of the process.
 But may lead to misfortune if not addressed.
 
-## Usgae
+## Usage
 
 Using `jsonschema-cli --help`
 

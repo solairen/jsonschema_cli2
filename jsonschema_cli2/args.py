@@ -1,4 +1,3 @@
-import yaml
 import jsonschema
 import argparse
 import pathlib
@@ -6,9 +5,6 @@ import os
 from jsonschema_cli2.load import load_file, load_string
 from jsonschema_cli2.resolvers import relative_path_resolver
 from jsonschema_cli2.exceptions import JsonschemaCliException
-import enum
-import json
-import yaml
 
 
 def load_schema(schema: str) -> dict:
@@ -53,10 +49,14 @@ def create_parser():
     )
 
     validate_parser.add_argument(
-        "schema_file_or_string", type=str, help="The schema you want to use to validate the data against",
+        "schema_file_or_string",
+        type=str,
+        help="The schema you want to use to validate the data against",
     )
     validate_parser.add_argument(
-        "data_file_or_string", type=str, help="The data you want validated by the schema",
+        "data_file_or_string",
+        type=str,
+        help="The data you want validated by the schema",
     )
 
     validate_parser.set_defaults(func=schema_validate)

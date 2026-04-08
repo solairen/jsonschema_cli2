@@ -1,4 +1,4 @@
-FROM python:3.12.2-slim-bookworm
+FROM python:3.12-slim-bookworm
 
 # Variables
 ARG username=solairen
@@ -6,7 +6,7 @@ ARG path=/development
 
 LABEL org.opencontainers.image.source=https://github.com/solairen/jsonschema-cli2
 LABEL org.opencontainers.image.description="Jsonschema-cli2 development image"
-LABEL maintainer=solairen@solairen.tech
+LABEL maintainer=michal@michaloleszek.com
 LABEL release=development
 LABEL creator=https://github.com/eyal-mor/jsonschema-cli
 
@@ -24,6 +24,7 @@ RUN mkdir ${path} \
   # Add user solairen
   && useradd -ms /bin/bash ${username} \
   && chown -R ${username}:${username} ${path} \
+  && pip install pre-commit \
   # Install starship
   && wget -P /tmp/ https://starship.rs/install.sh \
   && sh /tmp/install.sh -y \
