@@ -1,7 +1,7 @@
 flake8==7.4.1
 pytest==9.2.0
 pytest_mock==3.17.0
-pyyaml==6.0.3
+pyyaml==6.0.4
 jsonschema==4.26.0
 poetry==2.5.2
 twine==7.0.0
